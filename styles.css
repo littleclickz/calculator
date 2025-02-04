@@ -1,0 +1,82 @@
+#container {
+    min-height = 100vh;
+    min-width = 100vw;
+    display: flex;
+    justify-content: space-around; /*or try space-evenly or space-between*/
+    align-items: center;
+    align-content: center; /*or try space-around or space-between*/
+  }
+  
+  #calc-frame {
+    min-height = 320px; /*fiddle around for best*/
+    min-width =  240px; /*fiddle around for best*/
+    flex: 1 0 auto; /*middle parameter prevents shrinking*/
+    display: flex;
+  }
+  
+  #calc-interface {
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px; /*fiddle around for best*/
+  }
+  
+  #output-field; {
+    flex: 1
+    border-style: groove; /*use outset for buttons*/
+    border-color: black; /*change later if needed*/
+  }
+  
+  #operator-btns {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .operator-btns {
+    flex: 1;
+    border-style: outset;
+    border-color:gray black black gray; /*set outer two values to light color and inner two values to dark color*/
+  }
+  
+  #main-btns {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .btn-col {
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #enter-btn {
+    border-style: outset;
+    border-color:gray black black gray; /*set outer two values to light color and inner two values to dark color*/
+  }
+  
+  .num-btns {
+    flex: 1;
+    border-style: outset;
+    border-color:gray black black gray; /*set outer two values to light color and inner two values to dark color*/
+  }
+  
+  #lower-btns {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .lower-btns {
+    flex: 1;
+    border-style: outset;
+    border-color:gray black black gray; /*set outer two values to light color and inner two values to dark color*/
+  }
