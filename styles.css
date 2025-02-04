@@ -1,6 +1,6 @@
 #container {
-    min-height = 100vh;
-    min-width = 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
     display: flex;
     justify-content: space-around; /*or try space-evenly or space-between*/
     align-items: center;
@@ -8,9 +8,11 @@
   }
   
   #calc-frame {
-    min-height = 320px; /*fiddle around for best*/
-    min-width =  240px; /*fiddle around for best*/
-    flex: 1 0 auto; /*middle parameter prevents shrinking*/
+    min-height: 538px;
+    max-height: 538px;
+    min-width: 398px;
+    max-width:  398px;
+    flex: 1 0 auto;
     display: flex;
   }
   
@@ -23,8 +25,8 @@
     margin: 40px; /*fiddle around for best*/
   }
   
-  #output-field; {
-    flex: 1
+  #output-field {
+    flex: 1;
     border-style: groove; /*use outset for buttons*/
     border-color: black; /*change later if needed*/
   }
