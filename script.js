@@ -1,16 +1,13 @@
-let string1 = "12"; //change to empty string after testing
+let string1 = "";
 
 let operator;
 
-let string2 = "100"; //change to empty string after testing
+let string2 = "";
 
 function convert() {
   let num1 = Number(string1);
   let num2 = Number(string2);
-  return num1;
 }
-
-//assuming everything below this line works
 
 function add() {
   let additionTotal = num1 + num2;
@@ -48,6 +45,31 @@ function operate() {
   }
 }
 
-console.log(convert()); //should show 12
+console.log(operator); //should show "null"; otherwise change the "operator != null" thing below accordingly
 
-//to do: test (check console log)
+const additionButton = document.querySelectory("#addition-button");
+additionButton.addEventListener("click", () => {
+  let operator = "+";
+});
+
+const subtractionButton = document.querySelectory("#subtraction-button");
+subtractionButton.addEventListener("click", () => {
+  let operator = "-";
+});
+
+const multiplicationButton = document.querySelectory("#multiplication-button");
+multiplicationButton.addEventListener("click", () => {
+  let operator = "*";
+});
+
+const divisionButton = document.querySelectory("#division-button");
+divisionButton.addEventListener("click", () => {
+  let operator = "/";
+});
+
+//what to put inside event listener for digit buttons:
+  //if (operator === null) { //experiment with "undefined" if "null" doesn't work
+    //
+  //}
+
+//to do: test (check console log, then click an operator button and check log again)
