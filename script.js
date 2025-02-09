@@ -1,8 +1,16 @@
-let num1 = 4; //change after testing
+let string1 = "12"; //change to empty string after testing
 
-let operator = "*"; //change after testing
+let operator;
 
-let num2 = 2; //change after testing
+let string2 = "100"; //change to empty string after testing
+
+function convert() {
+  let num1 = Number(string1);
+  let num2 = Number(string2);
+  return num1;
+}
+
+//assuming everything below this line works
 
 function add() {
   let additionTotal = num1 + num2;
@@ -40,6 +48,6 @@ function operate() {
   }
 }
 
-operate();
+console.log(convert()); //should show 12
 
-console.log(operate()); //should show 8
+//to do: test (check console log)
