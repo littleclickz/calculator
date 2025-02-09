@@ -183,8 +183,12 @@ digit0.addEventListener("click", () => {
 
 const equalsButton = document.querySelector("#equals");
 equalsButton.addEventListener("click", () => {
-  operate();
-  displayField.textContent = result;
+  if (string1 != "" && string2 != "" && operator != null) { //experiment with undefined if null doesn't work
+    operate();
+    displayField.textContent = result;
+  } else {
+    pass;
+  }
 });
 
 const clearButton = document.querySelector("#refresh");
@@ -195,4 +199,4 @@ clearButton.addEventListener("click", () => {
   displayField.textContent = "";
 });
 
-//to do: test (click 1 + 5 =; then click CLEAR and try 70 - 12)
+//to do: test (try pressing = before entering all the numbers or an operator [should do nothing])
