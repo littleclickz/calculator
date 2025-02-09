@@ -181,5 +181,11 @@ digit0.addEventListener("click", () => {
   }
 });
 
+const equalsButton = document.querySelector("#equals");
+equalsButton.addEventListener("click", () => {
+  operate();
+  displayField.textContent = result;
+});
 
-//to do: test (click a digit button and see if the digit appears in the display field; click an operator button and see if the operator appears in the display field)
+
+//to do: test (click buttons to test out 1 + 5; should display 1 then + then 5 then 6)
