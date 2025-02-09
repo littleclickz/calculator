@@ -47,7 +47,6 @@ border-radius: 15px;
 width: 80%;
 height: 80%;
 margin: 2px;
-font-family: roboto;
 font-size: 12px;
 }
 
@@ -69,6 +68,7 @@ border-radius: 15px;
 margin: 2px;
 width: 80%;
 height: 80%;
+font-size: 22px;
 }
 
 #main-btns {
@@ -98,6 +98,7 @@ border-radius: 15px;
 margin: 2px;
 width: 80%;
 height: 80%;
+font-size: 22px;
 }
 
 .num-btns {
@@ -109,6 +110,7 @@ border-radius: 15px;
 margin: 2px;
 width: 80%;
 height: 80%;
+font-size: 22px;
 }
 
 #lower-btns {
@@ -129,4 +131,5 @@ border-radius: 15px;
 margin: 2px;
 width: 80%;
 height: 80%;
+font-size: 22px;
 }

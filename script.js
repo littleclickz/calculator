@@ -4,7 +4,7 @@ let operator;
 
 let string2 = "";
 
-const displayField = document.getElementById("#display-field");
+const displayField = document.getElementById("#output-field");
 
 function convert() {
   let num1 = Number(string1);
@@ -31,8 +31,6 @@ function divide() {
   return result.toFixed(6);
 }
 
-//assuming everything above this line works
-
 function operate() {
   if (operator === "+") {
     return add();
@@ -40,38 +38,41 @@ function operate() {
     return subtract();
   } else if (operator === "*") {
     return multiply();
-  } else if (operator === "/" && num2 != 0) {
+  } else if ((operator === "/") && (num2 != 0)) {
     return divide();
-  } else {
+  } else if ((operator === "/") && (num2 === 0)) {
     return "NICE TRY";
+  } else {
+    return "ERROR";
   }
 }
 
-const additionButton = document.querySelectory("#addition-button");
+const additionButton = document.getElementById("#add-btn");
 additionButton.addEventListener("click", () => {
   let operator = "+";
+  const displayField = document.getElementById("#output-field");
   displayField.textContent = operator;
 });
 
-const subtractionButton = document.querySelectory("#subtraction-button");
+const subtractionButton = document.getElementById("#sub-btn");
 subtractionButton.addEventListener("click", () => {
   let operator = "-";
   displayField.textContent = operator;
 });
 
-const multiplicationButton = document.querySelectory("#multiplication-button");
+const multiplicationButton = document.getElementById("#mult-btn");
 multiplicationButton.addEventListener("click", () => {
   let operator = "*";
   displayField.textContent = operator;
 });
 
-const divisionButton = document.querySelectory("#division-button");
+const divisionButton = document.getElementById("#div-btn");
 divisionButton.addEventListener("click", () => {
   let operator = "/";
   displayField.textContent = operator;
 });
 
-const digit1 = document.querySelector("#digit1");
+const digit1 = document.getElementById("#digit1");
 digit1.addEventListener("click", () => {
   if (operator === null) { //experiment with "undefined" if "null" doesn't work
     string1 += "1";
@@ -82,7 +83,7 @@ digit1.addEventListener("click", () => {
   }
 });
 
-const digit2 = document.querySelector("#digit2");
+const digit2 = document.getElementById("#digit2");
 digit2.addEventListener("click", () => {
   if (operator === null) { //experiment with "undefined" if "null" doesn't work
     string1 += "2";
@@ -93,7 +94,7 @@ digit2.addEventListener("click", () => {
   }
 });
 
-const digit3 = document.querySelector("#digit3");
+const digit3 = document.getElementById("#digit3");
 digit3.addEventListener("click", () => {
   if (operator === null) { //experiment with "undefined" if "null" doesn't work
     string1 += "3";
@@ -104,7 +105,7 @@ digit3.addEventListener("click", () => {
   }
 });
 
-const digit4 = document.querySelector("#digit4");
+const digit4 = document.getElementById("#digit4");
 digit4.addEventListener("click", () => {
   if (operator === null) { //experiment with "undefined" if "null" doesn't work
     string1 += "4";
@@ -115,7 +116,7 @@ digit4.addEventListener("click", () => {
   }
 });
 
-const digit5 = document.querySelector("#digit5");
+const digit5 = document.getElementById("#digit5");
 digit5.addEventListener("click", () => {
   if (operator === null) { //experiment with "undefined" if "null" doesn't work
     string1 += "5";
@@ -126,7 +127,7 @@ digit5.addEventListener("click", () => {
   }
 });
 
-const digit6 = document.querySelector("#digit6");
+const digit6 = document.getElementById("#digit6");
 digit6.addEventListener("click", () => {
   if (operator === null) { //experiment with "undefined" if "null" doesn't work
     string1 += "6";
@@ -137,7 +138,7 @@ digit6.addEventListener("click", () => {
   }
 });
 
-const digit7 = document.querySelector("#digit7");
+const digit7 = document.getElementById("#digit7");
 digit7.addEventListener("click", () => {
   if (operator === null) { //experiment with "undefined" if "null" doesn't work
     string1 += "7";
@@ -148,7 +149,7 @@ digit7.addEventListener("click", () => {
   }
 });
 
-const digit8 = document.querySelector("#digit8");
+const digit8 = document.getElementById("#digit8");
 digit8.addEventListener("click", () => {
   if (operator === null) { //experiment with "undefined" if "null" doesn't work
     string1 += "8";
@@ -159,7 +160,7 @@ digit8.addEventListener("click", () => {
   }
 });
 
-const digit9 = document.querySelector("#digit9");
+const digit9 = document.getElementById("#digit9");
 digit9.addEventListener("click", () => {
   if (operator === null) { //experiment with "undefined" if "null" doesn't work
     string1 += "9";
@@ -170,7 +171,7 @@ digit9.addEventListener("click", () => {
   }
 });
 
-const digit0 = document.querySelector("#digit0");
+const digit0 = document.getElementById("#digit0");
 digit0.addEventListener("click", () => {
   if (operator === null) { //experiment with "undefined" if "null" doesn't work
     string1 += "0";
@@ -181,7 +182,7 @@ digit0.addEventListener("click", () => {
   }
 });
 
-const equalsButton = document.querySelector("#equals");
+const equalsButton = document.getElementById("#equals");
 equalsButton.addEventListener("click", () => {
   if (string1 != "" && string2 != "" && operator != null) { //experiment with undefined if null doesn't work
     operate();
@@ -191,7 +192,7 @@ equalsButton.addEventListener("click", () => {
   }
 });
 
-const clearButton = document.querySelector("#refresh");
+const clearButton = document.getElementById("#clear-btn");
 clearButton.addEventListener("click", () => {
   let string1 = "";
   let string2 = "";
