@@ -88,7 +88,7 @@ width: 80%;
 height: 80%;
 }
 
-#enter-btn {
+#equals {
 border-style: outset;
 border-color:gray black black gray; /*set outer two values to light color and inner two values to dark color*/
 border-width: 2px;
