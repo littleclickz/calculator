@@ -24,12 +24,22 @@ function divide() {
   return divisionTotal;
 }
 
-console.log(add()); //should show 6
+//assuming everything above this line works
 
-console.log(subtract()); //should show 2
+function operate() {
+  if (operator === "+") {
+    return add();
+  } else if (operator === "-") {
+    return subtract();
+  } else if (operator === "*") {
+    return multiply();
+  } else if (operator === "/" && num2 != 0) {
+    return divide();
+  } else {
+    return "ERROR";
+  }
+}
 
-console.log(multiply()); //should show 8
+operate();
 
-console.log(divide()); //should show 2
-
-//to do: test this code (check the console log)
+console.log(operate()); //should show 8
