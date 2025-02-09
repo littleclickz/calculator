@@ -12,23 +12,23 @@ function convert() {
 }
 
 function add() {
-  let additionTotal = num1 + num2;
-  return additionTotal;
+  let result = num1 + num2;
+  return result;
 }
 
 function subtract() {
-  let subtractionTotal = num1 - num2;
-  return subtractionTotal;
+  let result = num1 - num2;
+  return result;
 }
 
 function multiply() {
-  let multiplicationTotal = num1 * num2;
-  return multiplicationTotal;
+  let result = num1 * num2;
+  return result;
 }
 
 function divide() {
-  let divisionTotal = num1 / num2;
-  return divisionTotal;
+  let result = num1 / num2;
+  return result.toFixed(6);
 }
 
 //assuming everything above this line works
@@ -43,7 +43,7 @@ function operate() {
   } else if (operator === "/" && num2 != 0) {
     return divide();
   } else {
-    return "ERROR";
+    return "NICE TRY";
   }
 }
 
