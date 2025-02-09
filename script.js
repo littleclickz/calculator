@@ -187,5 +187,12 @@ equalsButton.addEventListener("click", () => {
   displayField.textContent = result;
 });
 
+const clearButton = document.querySelector("#refresh");
+clearButton.addEventListener("click", () => {
+  let string1 = "";
+  let string2 = "";
+  let operator; //if this doesn't work, try let operator = ""; here and change if operator === null to if operator === "" above
+  displayField.textContent = "";
+});
 
-//to do: test (click buttons to test out 1 + 5; should display 1 then + then 5 then 6)
+//to do: test (click 1 + 5 =; then click CLEAR and try 70 - 12)
